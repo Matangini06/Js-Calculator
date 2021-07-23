@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:600,700" rel="stylesheet">
+	<meta charset="utf-8">
+	<title>Js Calculator</title>
+</head>
+<body>
+	<div class="container">
+		<table border="1" cellspacing="0">
+			<tr>
+				<td colspan="4" id="inpuLabel">0</td>
+			</tr>
+			<tr>
+				<td colspan="2"><button onClick="pushBtn(this);">C</button> 
+				<td ><button onClick="pushBtn(this);">AC</button></td>
+				<td><button onClick="pushBtn(this);">/</button></td>
+			</tr>
+			<tr>
+				<td><button onClick="pushBtn(this);">7</button></td>
+				<td><button onClick="pushBtn(this);">8</button></td>
+				<td><button onClick="pushBtn(this);">9</button></td>
+				<td><button onClick="pushBtn(this);">*</button></td>
+			</tr>
+			<tr>
+				<td><button onClick="pushBtn(this);">4</button></td>
+				<td><button onClick="pushBtn(this);">5</button></td>
+				<td><button onClick="pushBtn(this);">6</button></td>
+				<td><button onClick="pushBtn(this);">-</button></td>
+			</tr>
+			<tr>
+				<td><button onClick="pushBtn(this);">1</button></td>
+				<td><button onClick="pushBtn(this);">2</button></td>
+				<td><button onClick="pushBtn(this);">3</button></td>
+				<td><button onClick="pushBtn(this);">+</button></td>
+			</tr>
+			<tr>
+				<td colspan="2"><button onClick="pushBtn(this);">0</button></td>
+				<td><button onClick="pushBtn(this);">.</button></td>
+				<td><button onClick="pushBtn(this);">=</button></td>
+			</tr>
+		</table>
+	</div>
+
+
+
+
+	<script>
+		var inpuLabel = document.getElementById('inpuLabel');
+
+		function pushBtn(obj){
+			var pushed = obj.innerHTML;
+			if (pushed == '='){
+				inpuLabel.innerHTML = eval(inpuLabel.innerHTML);
+			}
+			else if(pushed == 'AC'){
+				inpuLabel.innerHTML = '0';
+			}
+			else{
+				if (inpuLabel.innerHTML == '0'){
+					inpuLabel.innerHTML = pushed;
+				}
+				else{
+					inpuLabel.innerHTML += pushed;
+
+				}
+			}
+		}
+	</script>
+
+</body>
+</html>
+
