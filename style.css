@@ -11,8 +11,8 @@ body{
 }
 
 .container{
-	width: 500px;
-        height: 1000px;
+	width: 600px;
+        height: 1020px;
 	background-color: blue;
 	margin: 120px auto;
 }
