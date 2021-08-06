@@ -43,3 +43,10 @@ button{
 	background-color: black;
 	color: white;
 }
+
+
+@media and screen (max width : 460px){
+.container{ 
+    Width: 400px;
+}
+}
