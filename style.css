@@ -11,7 +11,7 @@ body{
 }
 
 .container{
-	width: 320px;
+	width: 500px;
 	background-color: blue;
 	margin: 120px auto;
 }
